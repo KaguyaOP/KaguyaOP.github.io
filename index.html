@@ -1,402 +1,179 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0d0e12" />
-    <meta
-      name="description"
-      content="From your feed to your shelf. Explore KaguyaOP's curated manga and light novel recommendations."
-    />
-    <title>KaguyaOP — Your next obsession.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="estilo.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#collection">Skip to the books</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaguyaOP — Suas Próximas Obsessões</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
     <div class="page-shell">
-      <header class="topbar">
-        <a class="wordmark" href="#" aria-label="KaguyaOP home"
-          ><span class="brand-symbol" aria-hidden="true">月</span> KAGUYA<span
-            >OP</span
-          ><span class="brand-dot">.</span></a
-        >
-        <a
-          class="youtube-link"
-          aria-label="Find KaguyaOP on YouTube (opens in a new tab)"
-          href="https://www.youtube.com/@kaguyaop"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="fa-brands fa-youtube" aria-hidden="true"></i>
-          <span>Find me on YouTube</span
-          ><i
-            class="fa-solid fa-arrow-up-right-from-square"
-            aria-hidden="true"
-          ></i
-        ></a>
-      </header>
-
-      <section class="profile" aria-labelledby="profile-title">
-        <!-- Replace this placeholder with your channel avatar. -->
-        <div class="avatar-wrap">
-          <img
-            class="avatar"
-            src="https://ui-avatars.com/api/?name=K+OP&amp;background=ff4757&amp;color=ffffff&amp;size=160&amp;bold=true"
-            alt="KaguyaOP avatar placeholder"
-            width="76"
-            height="76"
-          /><span class="online-dot" aria-hidden="true"></span>
+        <!-- TOPBAR -->
+        <div class="topbar">
+            <div class="wordmark">
+                <span class="brand-symbol">月</span>KAGUYA<span>OP</span><span class="brand-dot">.</span>
+            </div>
+            <a href="https://youtube.com" target="_blank" class="youtube-link">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Canal no YouTube</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
         </div>
-        <p class="handle">
-          @kaguyaop <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        </p>
-        <h1 id="profile-title">Your next <span>obsession.</span></h1>
-        <p class="bio">
-          From your feed to your shelf.<br class="mobile-break" />
-          Manga, light novels &amp; stories that stay with you.
-        </p>
-        <p class="curated-note">
-          <span aria-hidden="true">✦</span> Handpicked by a fan. For the fans.
-        </p>
-      </section>
 
-      <main id="collection">
-        <nav class="category-nav" aria-label="Browse book categories">
-          <div class="category-links">
-            <a class="all-picks" href="#featured"
-              ><i class="fa-solid fa-border-all" aria-hidden="true"></i> All
-              picks</a
-            ><a href="#manga"
-              ><i class="fa-solid fa-book-open" aria-hidden="true"></i> Manga</a
-            ><a href="#light-novels"
-              ><i class="fa-solid fa-book" aria-hidden="true"></i> Light
-              novels</a
-            >
-          </div>
-          <span class="shelf-note">THE GOOD STUFF, ALL IN ONE PLACE</span>
-        </nav>
-
-        <!-- Replace EVERY product href below with its corresponding Amazon affiliate URL. -->
-        <a
-          class="featured"
-          id="featured"
-          href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
-          target="_blank"
-          rel="sponsored noopener noreferrer"
-          aria-labelledby="featured-title featured-cta"
-        >
-          <div class="feature-copy">
-            <span class="feature-badge"
-              ><i class="fa-solid fa-play" aria-hidden="true"></i> LATEST SHORTS
-              <span>•</span> THE SPOTLIGHT</span
-            >
-            <p class="eyebrow">SAW IT IN THE VIDEO?</p>
-            <h2 id="featured-title">
-              Less ordinary.<br />More <span>Chainsaw.</span>
-            </h2>
-            <p class="feature-description">
-              A boy. A devil. A whole lot of chaos.<br />Start the series that
-              hits different.
-            </p>
-            <div class="feature-details">
-              <span>Chainsaw Man</span><span class="volume">VOL. 01</span>
+        <!-- PROFILE -->
+        <header class="profile">
+            <div class="avatar-wrap">
+                <img src="https://placeholder.com" alt="KaguyaOP Avatar" class="avatar" width="76" height="76">
+                <div class="online-dot"></div>
             </div>
-            <p class="price feature-price">$11.99 <span>Paperback</span></p>
-            <span class="buy-button" id="featured-cta"
-              ><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Buy
-              on Amazon
-              <i
-                class="fa-solid fa-arrow-up-right-from-square"
-                aria-hidden="true"
-              ></i
-            ></span>
-          </div>
-          <div class="feature-art">
-            <span class="art-kanji" aria-hidden="true">チェンソー</span
-            ><span class="orbit orbit-one" aria-hidden="true"></span
-            ><span class="orbit orbit-two" aria-hidden="true"></span
-            ><img
-              src="https://covers.openlibrary.org/b/isbn/9781974709939-L.jpg"
-              alt="Chainsaw Man volume 1 cover"
-              width="240"
-              height="360"
-              fetchpriority="high"
-            /><span class="art-caption"
-              >TATSUKI FUJIMOTO <span>01 / MANGA</span></span
-            >
-          </div>
-        </a>
+            <div class="handle">@kaguyaop<i class="fa-solid fa-circle-check"></i></div>
+            <h1>Sua próxima <span>obsessão</span>.</h1>
+            <p class="bio">Do seu feed direto para a sua estante.<br class="mobile-break"> Mangás, light novels e histórias que marcam.</p>
+            <p class="curated-note"><span>✦</span> Curadoria de fã. Para fãs.</p>
+        </header>
 
-        <section class="book-section" id="manga" aria-labelledby="manga-title">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">THE SHELF ESSENTIALS</p>
-              <h2 id="manga-title">Manga worth the hype<span>.</span></h2>
+        <!-- SISTEMA DE FILTROS AVANÇADOS -->
+        <section class="filter-section">
+            <div class="filter-group">
+                <span class="filter-label">Ver apenas:</span>
+                <div class="main-filters">
+                    <button class="filter-btn active" data-main="all"><i class="fa-solid fa-border-all"></i> Tudo</button>
+                    <button class="filter-btn" data-main="manga"><i class="fa-solid fa-book-open"></i> Mangás</button>
+                    <button class="filter-btn" data-main="novel"><i class="fa-solid fa-book"></i> Light Novels</button>
+                </div>
             </div>
-            <span class="section-count"
-              >04 PICKS <i class="fa-solid fa-arrow-down" aria-hidden="true"></i
-            ></span>
-          </div>
-          <div class="product-grid">
-            <a
-              class="book-card"
-              href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-            >
-              <div class="book-art art-purple">
-                <span class="book-label">FAN FAVORITE</span
-                ><img
-                  src="https://covers.openlibrary.org/b/isbn/9781974710027-L.jpg"
-                  alt="Jujutsu Kaisen volume 1 cover"
-                  width="140"
-                  height="210"
-                  loading="lazy"
-                />
-              </div>
-              <div class="book-info">
-                <p class="book-meta">MANGA <span>VOL. 01</span></p>
-                <h3>Jujutsu Kaisen</h3>
-                <p class="author">Gege Akutami</p>
-                <div class="book-bottom">
-                  <span class="price">$11.99</span
-                  ><span class="amazon-link"
-                    >View on Amazon
-                    <i
-                      class="fa-solid fa-arrow-up-right-from-square"
-                      aria-hidden="true"
-                    ></i
-                  ></span>
+            
+            <div class="filter-group">
+                <span class="filter-label">Filtrar por Gênero:</span>
+                <div class="sub-filters">
+                    <button class="sub-btn" data-tag="fantasia">Fantasia</button>
+                    <button class="sub-btn" data-tag="romance">Romance</button>
+                    <button class="sub-btn" data-tag="acao">Ação</button>
+                    <button class="sub-btn" data-tag="misterio">Mistério</button>
+                    <button class="sub-btn" data-tag="shonen">Shonen</button>
                 </div>
-              </div>
-            </a>
-            <a
-              class="book-card"
-              href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-            >
-              <div class="book-art art-teal">
-                <span class="book-label">THE ADVENTURE BEGINS</span
-                ><img
-                  src="https://covers.openlibrary.org/b/isbn/9781569319017-L.jpg"
-                  alt="One Piece volume 1 cover"
-                  width="140"
-                  height="210"
-                  loading="lazy"
-                />
-              </div>
-              <div class="book-info">
-                <p class="book-meta">MANGA <span>VOL. 01</span></p>
-                <h3>One Piece</h3>
-                <p class="author">Eiichiro Oda</p>
-                <div class="book-bottom">
-                  <span class="price">$11.99</span
-                  ><span class="amazon-link"
-                    >View on Amazon
-                    <i
-                      class="fa-solid fa-arrow-up-right-from-square"
-                      aria-hidden="true"
-                    ></i
-                  ></span>
-                </div>
-              </div>
-            </a>
-            <a
-              class="book-card"
-              href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-            >
-              <div class="book-art art-rose">
-                <span class="book-label">CAN'T PUT IT DOWN</span
-                ><img
-                  src="https://covers.openlibrary.org/b/isbn/9781974700523-L.jpg"
-                  alt="Demon Slayer volume 1 cover"
-                  width="140"
-                  height="210"
-                  loading="lazy"
-                />
-              </div>
-              <div class="book-info">
-                <p class="book-meta">MANGA <span>VOL. 01</span></p>
-                <h3>Demon Slayer</h3>
-                <p class="author">Koyoharu Gotouge</p>
-                <div class="book-bottom">
-                  <span class="price">$11.99</span
-                  ><span class="amazon-link"
-                    >View on Amazon
-                    <i
-                      class="fa-solid fa-arrow-up-right-from-square"
-                      aria-hidden="true"
-                    ></i
-                  ></span>
-                </div>
-              </div>
-            </a>
-            <a
-              class="book-card"
-              href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-            >
-              <div class="book-art art-mint">
-                <span class="book-label">A LITTLE WHOLESOME</span
-                ><img
-                  src="https://covers.openlibrary.org/b/isbn/9781974715466-L.jpg"
-                  alt="Spy x Family volume 1 cover"
-                  width="140"
-                  height="210"
-                  loading="lazy"
-                />
-              </div>
-              <div class="book-info">
-                <p class="book-meta">MANGA <span>VOL. 01</span></p>
-                <h3>Spy × Family</h3>
-                <p class="author">Tatsuya Endo</p>
-                <div class="book-bottom">
-                  <span class="price">$11.99</span
-                  ><span class="amazon-link"
-                    >View on Amazon
-                    <i
-                      class="fa-solid fa-arrow-up-right-from-square"
-                      aria-hidden="true"
-                    ></i
-                  ></span>
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
         </section>
 
-        <section
-          class="book-section"
-          id="light-novels"
-          aria-labelledby="novels-title"
-        >
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">ONE MORE CHAPTER…</p>
-              <h2 id="novels-title">
-                A different kind of escape<span>.</span>
-              </h2>
+        <!-- CARROSSEL BANNER PRINCIPAL (Novidades, Cupons, Promos) -->
+        <section class="carousel-container main-banner-carousel">
+            <div class="carousel-track" id="track-main">
+                
+                <!-- Slide 1: Promoção Relâmpago -->
+                <div class="carousel-slide main-slide-item visual-promo-1">
+                    <div class="slide-badge">⚡ PROMOÇÃO RELÂMPAGO</div>
+                    <h2>Semanas de Desconto Amazon</h2>
+                    <p>Mangás e Light Novels selecionados com até 40% de desconto físico e frete grátis Prime!</p>
+                    <a href="SEU_LINK_DE_AFILIADO_GERAL" target="_blank" class="slide-cta">Aproveitar Ofertas <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <!-- Slide 2: Cupom -->
+                <div class="carousel-slide main-slide-item visual-promo-2">
+                    <div class="slide-badge">🎟️ CUPOM EXCLUSIVO</div>
+                    <h2>Frete Grátis no Aplicativo</h2>
+                    <p>Abra os links direto no app da Shopee ou Amazon para garantir cupons adicionais de entrega.</p>
+                    <a href="#" class="slide-cta">Ver Instruções <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
             </div>
-            <span class="section-count"
-              >02 LIGHT NOVELS
-              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i
-            ></span>
-          </div>
-          <div class="novel-grid">
-            <a
-              class="novel-card"
-              href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-              ><div class="novel-art art-blue">
-                <img
-                  src="https://covers.openlibrary.org/b/isbn/9781975319274-L.jpg"
-                  alt="Solo Leveling novel volume 1 cover"
-                  width="100"
-                  height="150"
-                  loading="lazy"
-                />
-              </div>
-              <div class="novel-info">
-                <p class="book-meta">LIGHT NOVEL <span>VOL. 01</span></p>
-                <h3>Solo Leveling</h3>
-                <p class="author">Chugong</p>
-                <p class="novel-description">
-                  The weakest hunter. An entirely new level.
-                </p>
-                <p class="price">$15.00</p>
-                <span class="amazon-link"
-                  >View on Amazon
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                    aria-hidden="true"
-                  ></i
-                ></span></div
-            ></a>
-            <a
-              class="novel-card"
-              href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-              ><div class="novel-art art-amber">
-                <img
-                  src="https://covers.openlibrary.org/b/id/15138828-L.jpg"
-                  alt="Classroom of the Elite novel volume 1 cover"
-                  width="100"
-                  height="150"
-                  loading="lazy"
-                />
-              </div>
-              <div class="novel-info">
-                <p class="book-meta">LIGHT NOVEL <span>VOL. 01</span></p>
-                <h3>Classroom of the Elite</h3>
-                <p class="author">Syougo Kinugasa</p>
-                <p class="novel-description">
-                  Welcome to a school where nothing is as it seems.
-                </p>
-                <p class="price">$15.99</p>
-                <span class="amazon-link"
-                  >View on Amazon
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                    aria-hidden="true"
-                  ></i
-                ></span></div
-            ></a>
-          </div>
+            <button class="carousel-arrow prev" onclick="moveSlide('track-main', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel-arrow next" onclick="moveSlide('track-main', 1)"><i class="fa-solid fa-chevron-right"></i></button>
         </section>
 
-        <aside class="shipping-card" aria-labelledby="shipping-title">
-          <div class="shipping-icon">
-            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
-          </div>
-          <div>
-            <p class="eyebrow">A LITTLE TIP FOR YOUR NEXT HAUL</p>
-            <h2 id="shipping-title">More manga. Less shipping.</h2>
-            <p>
-              Check the Amazon app for free shipping offers and eligible order
-              minimums.<br />Availability varies by location, seller, and
-              account. Check the terms at checkout.
-            </p>
-          </div>
-          <span class="tip-stamp" aria-hidden="true"
-            >FAN<br />TO FAN <i class="fa-solid fa-heart"></i
-          ></span>
-        </aside>
-        <p class="price-note">
-          Prices shown are examples in USD. Check Amazon for current pricing and
-          availability.
-        </p>
-      </main>
+        <!-- SEÇÃO MANGÁS POPULARES (Suporta até 12 itens no Carrossel) -->
+        <section class="book-section dynamic-shelf" data-section-type="manga">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">OS MAIS PROCURADOS</div>
+                    <h2>Mangás <span>em Alta</span></h2>
+                </div>
+                <div class="section-count">12 VOLUMES <i class="fa-solid fa-fire"></i></div>
+            </div>
 
-      <footer>
-        <a class="wordmark footer-brand" href="#"
-          >KAGUYA<span>OP</span><span class="brand-dot">.</span></a
-        >
-        <p>Good stories deserve a spot on your shelf.</p>
-        <p class="disclosure">
-          As an Amazon Associate I earn from qualifying purchases.<br />Shopping
-          through these links supports the channel, at no extra cost to you.
-        </p>
-        <span class="made-with"
-          >CURATED WITH
-          <i class="fa-solid fa-heart" aria-hidden="true"></i> &amp; A LITTLE
-          TOO MUCH ANIME</span
-        >
-      </footer>
-    </div>
-  </body>
-</html>
+            <div class="carousel-container item-carousel">
+                <div class="carousel-track grid-track" id="track-manga">
+                    
+                    <!-- Item 1 -->
+                    <div class="grid-card-item searchable-item" data-type="manga" data-tags="shonen acao fantasia">
+                        <a href="LINK_AMAZON_MANGA_1" target="_blank" class="book-card">
+                            <div class="book-art art-purple">
+                                <span class="book-label">POPULAR</span>
+                                <img src="https://placeholder.com" alt="Chainsaw Man">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">MANGA <span>VOL. 16</span></div>
+                                <h3>Chainsaw Man</h3>
+                                <div class="author">Tatsuki Fujimoto</div>
+                                <div class="book-bottom">
+                                    <span class="price">R$ 29,90</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="grid-card-item searchable-item" data-type="manga" data-tags="shonen acao romance">
+                        <a href="LINK_AMAZON_MANGA_2" target="_blank" class="book-card">
+                            <div class="book-art art-teal">
+                                <span class="book-label">RELEVANTE</span>
+                                <img src="https://placeholder.com" alt="Jujutsu Kaisen">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">MANGA <span>VOL. 01</span></div>
+                                <h3>Jujutsu Kaisen</h3>
+                                <div class="author">Gege Akutami</div>
+                                <div class="book-bottom">
+                                    <span class="price">R$ 27,90</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Repita o padrão acima mudando as IDs, tags e links até completar 12 itens -->
+
+                </div>
+                <button class="carousel-arrow prev" onclick="moveGridSlide('track-manga', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" onclick="moveGridSlide('track-manga', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- SEÇÃO LIGHT NOVELS POPULARES -->
+        <section class="book-section dynamic-shelf" data-section-type="novel">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">HISTÓRIAS PROFUNDAS</div>
+                    <h2>Light Novels <span>Favoritas</span></h2>
+                </div>
+                <div class="section-count">12 LIVROS <i class="fa-solid fa-book-bookmark"></i></div>
+            </div>
+
+            <div class="carousel-container item-carousel">
+                <div class="carousel-track grid-track" id="track-novel">
+                    
+                    <!-- Item 1 -->
+                    <div class="grid-card-item searchable-item" data-type="novel" data-tags="fantasia acao">
+                        <a href="LINK_AMAZON_NOVEL_1" target="_blank" class="book-card">
+                            <div class="book-art art-rose">
+                                <span class="book-label">NOVEL</span>
+                                <img src="https://placeholder.com" alt="Solo Leveling Novel">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">NOVEL <span>VOL. 01</span></div>
+                                <h3>Solo Leveling</h3>
+                                <div class="author">Chugong</div>
+                                <div class="book-bottom">
+                                    <span class="price">R$ 45,00</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Repita alterando os dados até preencher os blocos desejados -->
+
+                </div>
+                <button class="carousel-arrow prev" onclick="moveGridSlide('track-novel', -1)"><i class="fa-solid fa-chevron-left"></i></button>
