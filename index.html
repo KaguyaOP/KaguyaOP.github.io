@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KaguyaOP — Suas Próximas Obsessões</title>
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -15,7 +16,7 @@
             <div class="wordmark">
                 <span class="brand-symbol">月</span>KAGUYA<span>OP</span><span class="brand-dot">.</span>
             </div>
-            <a href="https://youtube.com" target="_blank" class="youtube-link">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="youtube-link">
                 <i class="fa-brands fa-youtube"></i>
                 <span>Canal no YouTube</span>
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -25,7 +26,7 @@
         <!-- PROFILE -->
         <header class="profile">
             <div class="avatar-wrap">
-                <img src="https://placeholder.com" alt="KaguyaOP Avatar" class="avatar" width="76" height="76">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="KaguyaOP Avatar" class="avatar" width="76" height="76">
                 <div class="online-dot"></div>
             </div>
             <div class="handle">@kaguyaop<i class="fa-solid fa-circle-check"></i></div>
@@ -66,7 +67,7 @@
                     <div class="slide-badge">⚡ PROMOÇÃO RELÂMPAGO</div>
                     <h2>Semanas de Desconto Amazon</h2>
                     <p>Mangás e Light Novels selecionados com até 40% de desconto físico e frete grátis Prime!</p>
-                    <a href="SEU_LINK_DE_AFILIADO_GERAL" target="_blank" class="slide-cta">Aproveitar Ofertas <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="SEU_LINK_DE_AFILIADO_GERAL" target="_blank" rel="noopener noreferrer" class="slide-cta">Aproveitar Ofertas <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
 
                 <!-- Slide 2: Cupom -->
@@ -78,8 +79,8 @@
                 </div>
 
             </div>
-            <button class="carousel-arrow prev" onclick="moveSlide('track-main', -1)"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="carousel-arrow next" onclick="moveSlide('track-main', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="carousel-arrow prev" type="button" aria-label="Banner anterior" onclick="moveSlide('track-main', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel-arrow next" type="button" aria-label="Próximo banner" onclick="moveSlide('track-main', 1)"><i class="fa-solid fa-chevron-right"></i></button>
         </section>
 
         <!-- SEÇÃO MANGÁS POPULARES (Suporta até 12 itens no Carrossel) -->
@@ -97,10 +98,10 @@
                     
                     <!-- Item 1 -->
                     <div class="grid-card-item searchable-item" data-type="manga" data-tags="shonen acao fantasia">
-                        <a href="LINK_AMAZON_MANGA_1" target="_blank" class="book-card">
+                        <a href="LINK_AMAZON_MANGA_1" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
                             <div class="book-art art-purple">
                                 <span class="book-label">POPULAR</span>
-                                <img src="https://placeholder.com" alt="Chainsaw Man">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Chainsaw Man">
                             </div>
                             <div class="book-info">
                                 <div class="book-meta">MANGA <span>VOL. 16</span></div>
@@ -116,10 +117,10 @@
 
                     <!-- Item 2 -->
                     <div class="grid-card-item searchable-item" data-type="manga" data-tags="shonen acao romance">
-                        <a href="LINK_AMAZON_MANGA_2" target="_blank" class="book-card">
+                        <a href="LINK_AMAZON_MANGA_2" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
                             <div class="book-art art-teal">
                                 <span class="book-label">RELEVANTE</span>
-                                <img src="https://placeholder.com" alt="Jujutsu Kaisen">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Jujutsu Kaisen">
                             </div>
                             <div class="book-info">
                                 <div class="book-meta">MANGA <span>VOL. 01</span></div>
@@ -136,8 +137,8 @@
                     <!-- Repita o padrão acima mudando as IDs, tags e links até completar 12 itens -->
 
                 </div>
-                <button class="carousel-arrow prev" onclick="moveGridSlide('track-manga', -1)"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-arrow next" onclick="moveGridSlide('track-manga', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="carousel-arrow prev" type="button" aria-label="Rolar para a esquerda" onclick="moveGridSlide('track-manga', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" type="button" aria-label="Rolar para a direita" onclick="moveGridSlide('track-manga', 1)"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
         
@@ -158,17 +159,17 @@
                     
                     <!-- Item 1 (Exemplo de Novel) -->
                     <div class="grid-card-item searchable-item" data-type="novel" data-tags="fantasia acao">
-                        <a href="LINK_AMAZON_NOVEL_1" target="_blank" class="book-card">
+                        <a href="LINK_AMAZON_NOVEL_1" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
                             <div class="book-art art-rose">
                                 <span class="book-label">NOVEL</span>
-                                <img src="https://placeholder.com" alt="Solo Leveling Novel">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Solo Leveling Novel">
                             </div>
                             <div class="book-info">
                                 <div class="book-meta">NOVEL <span>VOL. 01</span></div>
                                 <h3>Solo Leveling</h3>
                                 <div class="author">Chugong</div>
                                 <div class="book-bottom">
-                                    <span class="price">R\$ 45,00</span>
+                                    <span class="price">R$ 45,00</span>
                                     <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                                 </div>
                             </div>
@@ -178,8 +179,8 @@
                     <!-- Você pode duplicar o bloco acima aqui para adicionar mais novels -->
 
                 </div>
-                <button class="carousel-arrow prev" onclick="moveGridSlide('track-novel', -1)"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-arrow next" onclick="moveGridSlide('track-novel', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="carousel-arrow prev" type="button" aria-label="Rolar para a esquerda" onclick="moveGridSlide('track-novel', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" type="button" aria-label="Rolar para a direita" onclick="moveGridSlide('track-novel', 1)"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
 
@@ -201,17 +202,17 @@
                     
                     <!-- Item Recomendado 1 -->
                     <div class="grid-card-item searchable-item" data-type="manga" data-tags="romance misterio">
-                        <a href="LINK_AMAZON_RECOMENDA_1" target="_blank" class="book-card">
+                        <a href="LINK_AMAZON_RECOMENDA_1" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
                             <div class="book-art art-mint">
                                 <span class="book-label">⭐ NOTA 10</span>
-                                <img src="https://placeholder.com" alt="Manga Recomendado">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Manga Recomendado">
                             </div>
                             <div class="book-info">
                                 <div class="book-meta">INDICAÇÃO <span>LEITURA</span></div>
                                 <h3>Kaguya-sama: Love is War</h3>
                                 <div class="author">Aka Akasaka</div>
                                 <div class="book-bottom">
-                                    <span class="price">R\$ 34,90</span>
+                                    <span class="price">R$ 34,90</span>
                                     <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                                 </div>
                             </div>
@@ -221,8 +222,8 @@
                     <!-- Você pode duplicar o bloco acima aqui para colocar mais recomendações -->
 
                 </div>
-                <button class="carousel-arrow prev" onclick="moveGridSlide('track-kaguya', -1)"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-arrow next" onclick="moveGridSlide('track-kaguya', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="carousel-arrow prev" type="button" aria-label="Rolar para a esquerda" onclick="moveGridSlide('track-kaguya', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" type="button" aria-label="Rolar para a direita" onclick="moveGridSlide('track-kaguya', 1)"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
 
@@ -246,21 +247,31 @@
     <!-- ================================================================= -->
     <script>
         // Lógica de Deslocamento do Banner Principal
-        let currentMainIndex = 0;
+        const mainCarouselIndexes = new Map();
+
         function moveSlide(trackId, direction) {
             const track = document.getElementById(trackId);
+            if (!track || !track.children.length) return;
+
             const slides = track.children;
-            currentMainIndex += direction;
-            if (currentMainIndex < 0) currentMainIndex = slides.length - 1;
-            if (currentMainIndex >= slides.length) currentMainIndex = 0;
-            track.style.transform = `translateX(-${currentMainIndex * 100}%)`;
+            let index = mainCarouselIndexes.get(trackId) || 0;
+            index = (index + direction + slides.length) % slides.length;
+            mainCarouselIndexes.set(trackId, index);
+            track.style.transform = `translateX(-${index * 100}%)`;
         }
 
         // Lógica dos Carrosséis Laterais de Itens (Mangás/Novels/Recomendações)
         function moveGridSlide(trackId, direction) {
             const track = document.getElementById(trackId);
-            const scrollAmount = 260; // Tamanho médio do card + espaçamento
-            track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            if (!track) return;
+            const scroller = track.closest('.item-carousel');
+            if (!scroller) return;
+
+            const firstCard = track.querySelector('.grid-card-item');
+            const scrollAmount = firstCard
+                ? firstCard.getBoundingClientRect().width + 16
+                : 266;
+            scroller.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }
 
         // Sistema de Filtragem Cruzada Inteligente
@@ -295,14 +306,14 @@
 
         function applyFilters() {
             items.forEach(item => {
-                const itemType = item.getAttribute('data-type');
-                const itemTags = item.getAttribute('data-tags').split(' ');
+                const itemType = item.dataset.type || '';
+                const itemTags = (item.dataset.tags || '').split(/\s+/).filter(Boolean);
 
                 const matchesMain = (activeMainFilter === 'all' || itemType === activeMainFilter);
                 const matchesTags = (activeTags.length === 0 || activeTags.some(t => itemTags.includes(t)));
 
                 if (matchesMain && matchesTags) {
-                    item.style.display = 'block';
+                    item.style.display = '';
                     item.classList.remove('filtered-out');
                 } else {
                     item.style.display = 'none';
@@ -317,11 +328,10 @@
                 if (totalVisible === 0) {
                     shelf.style.display = 'none';
                 } else {
-                    shelf.style.display = 'block';
+                    shelf.style.display = '';
                 }
             });
         }
     </script>
 </body>
 </html>
-
