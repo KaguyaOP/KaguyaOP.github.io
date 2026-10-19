@@ -140,8 +140,10 @@
                 <button class="carousel-arrow next" onclick="moveGridSlide('track-manga', 1)"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
-
+        
+        <!-- ================================================================= -->
         <!-- SEÇÃO LIGHT NOVELS POPULARES -->
+        <!-- ================================================================= -->
         <section class="book-section dynamic-shelf" data-section-type="novel">
             <div class="section-heading">
                 <div>
@@ -154,7 +156,7 @@
             <div class="carousel-container item-carousel">
                 <div class="carousel-track grid-track" id="track-novel">
                     
-                    <!-- Item 1 -->
+                    <!-- Item 1 (Exemplo de Novel) -->
                     <div class="grid-card-item searchable-item" data-type="novel" data-tags="fantasia acao">
                         <a href="LINK_AMAZON_NOVEL_1" target="_blank" class="book-card">
                             <div class="book-art art-rose">
@@ -166,14 +168,160 @@
                                 <h3>Solo Leveling</h3>
                                 <div class="author">Chugong</div>
                                 <div class="book-bottom">
-                                    <span class="price">R$ 45,00</span>
+                                    <span class="price">R\$ 45,00</span>
                                     <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <!-- Repita alterando os dados até preencher os blocos desejados -->
+                    <!-- Você pode duplicar o bloco acima aqui para adicionar mais novels -->
 
                 </div>
                 <button class="carousel-arrow prev" onclick="moveGridSlide('track-novel', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" onclick="moveGridSlide('track-novel', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- SEÇÃO RECOMENDAÇÕES DA KAGUYA (Correção do Bloco) -->
+        <!-- ================================================================= -->
+        <section class="book-section dynamic-shelf" data-section-type="recomenda">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">ESPECIAL DA CASA</div>
+                    <h2>Recomendações da <span>Kaguya</span></h2>
+                </div>
+                <div class="section-count">PREMIUM <i class="fa-solid fa-star"></i></div>
+            </div>
+
+            <div class="carousel-container item-carousel">
+                <div class="carousel-track grid-track" id="track-kaguya">
+                    
+                    <!-- Item Recomendado 1 -->
+                    <div class="grid-card-item searchable-item" data-type="manga" data-tags="romance misterio">
+                        <a href="LINK_AMAZON_RECOMENDA_1" target="_blank" class="book-card">
+                            <div class="book-art art-mint">
+                                <span class="book-label">⭐ NOTA 10</span>
+                                <img src="https://placeholder.com" alt="Manga Recomendado">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">INDICAÇÃO <span>LEITURA</span></div>
+                                <h3>Kaguya-sama: Love is War</h3>
+                                <div class="author">Aka Akasaka</div>
+                                <div class="book-bottom">
+                                    <span class="price">R\$ 34,90</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Você pode duplicar o bloco acima aqui para colocar mais recomendações -->
+
+                </div>
+                <button class="carousel-arrow prev" onclick="moveGridSlide('track-kaguya', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" onclick="moveGridSlide('track-kaguya', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- RODAPÉ (FOOTER) -->
+        <!-- ================================================================= -->
+        <footer>
+            <div class="footer-brand">
+                <span class="brand-symbol">月</span>KAGUYA<span>OP</span><span class="brand-dot">.</span>
+            </div>
+            <p>Boas histórias merecem um espaço físico na sua coleção.</p>
+            <p class="disclosure">Como Associado da Amazon, eu ganho comissões por compras qualificadas efetuadas através dos links gerados, sem nenhum custo adicional para você.</p>
+            <div class="made-with">CRIADO COM <i class="fa-solid fa-heart"></i> PARA COMUNIDADE OTAKU</div>
+        </footer>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- LOGICA SCRIPT JAVASCRIPT (Filtros e Carrossel) -->
+    <!-- ================================================================= -->
+    <script>
+        // Lógica de Deslocamento do Banner Principal
+        let currentMainIndex = 0;
+        function moveSlide(trackId, direction) {
+            const track = document.getElementById(trackId);
+            const slides = track.children;
+            currentMainIndex += direction;
+            if (currentMainIndex < 0) currentMainIndex = slides.length - 1;
+            if (currentMainIndex >= slides.length) currentMainIndex = 0;
+            track.style.transform = `translateX(-${currentMainIndex * 100}%)`;
+        }
+
+        // Lógica dos Carrosséis Laterais de Itens (Mangás/Novels/Recomendações)
+        function moveGridSlide(trackId, direction) {
+            const track = document.getElementById(trackId);
+            const scrollAmount = 260; // Tamanho médio do card + espaçamento
+            track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        // Sistema de Filtragem Cruzada Inteligente
+        const mainButtons = document.querySelectorAll('.filter-btn');
+        const subButtons = document.querySelectorAll('.sub-btn');
+        const items = document.querySelectorAll('.searchable-item');
+
+        let activeMainFilter = 'all';
+        let activeTags = [];
+
+        mainButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                mainButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeMainFilter = btn.getAttribute('data-main');
+                applyFilters();
+            });
+        });
+
+        subButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+                const tag = btn.getAttribute('data-tag');
+                if (activeTags.includes(tag)) {
+                    activeTags = activeTags.filter(t => t !== tag);
+                } else {
+                    activeTags.push(tag);
+                }
+                applyFilters();
+            });
+        });
+
+        function applyFilters() {
+            items.forEach(item => {
+                const itemType = item.getAttribute('data-type');
+                const itemTags = item.getAttribute('data-tags').split(' ');
+
+                const matchesMain = (activeMainFilter === 'all' || itemType === activeMainFilter);
+                const matchesTags = (activeTags.length === 0 || activeTags.some(t => itemTags.includes(t)));
+
+                if (matchesMain && matchesTags) {
+                    item.style.display = 'block';
+                    item.classList.remove('filtered-out');
+                } else {
+                    item.style.display = 'none';
+                    item.classList.add('filtered-out');
+                }
+            });
+
+            // Oculta títulos de seções vazias de forma inteligente caso nada coincida
+            document.querySelectorAll('.dynamic-shelf').forEach(shelf => {
+                const totalVisible = shelf.querySelectorAll('.searchable-item:not(.filtered-out)').length;
+                
+                if (totalVisible === 0) {
+                    shelf.style.display = 'none';
+                } else {
+                    shelf.style.display = 'block';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
